@@ -1,10 +1,148 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AchieversIT Clone</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { color: #333; background: #fff; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #1d1d1d; color: #fff; padding: 1rem 2rem;
+    }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav li { cursor: pointer; }
+
+    .hero-carousel { position: relative; overflow: hidden; }
+    .carousel-track { display: flex; transition: transform 0.5s ease; }
+    .slide { min-width: 100%; position: relative; }
+    .slide img { width: 100%; height: 400px; object-fit: cover; }
+    .caption {
+      position: absolute; bottom: 40px; left: 60px;
+      background: rgba(0, 0, 0, 0.6); color: #fff;
+      padding: 20px; border-radius: 5px;
+    }
+    .caption button {
+      background: #ff5200; border: none; color: #fff;
+      padding: 10px 20px; cursor: pointer; font-weight: bold;
+    }
+    .btn {
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.4); color: #fff;
+      border: none; font-size: 2rem;
+      padding: 10px; cursor: pointer; z-index: 1;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .feature-cards {
+      display: flex; justify-content: space-around;
+      padding: 2rem; background: #f9f9f9;
+    }
+    .feature-cards .card {
+      background: #fff; padding: 1.5rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width: 30%; text-align: center;
+    }
+    .feature-cards .card a {
+      display: block; margin-top: 1rem;
+      color: #1f59f2; font-weight: bold;
+      text-decoration: none;
+    }
+
+    .trending, .recent-addition {
+      padding: 40px 20px; background-color: #faf6f6;
+    }
+    .trending h2, .recent-addition h2 {
+      text-align: center; margin-bottom: 30px; color: #222;
+    }
+    .course-grid, .card-grid {
+      display: flex; flex-wrap: wrap;
+      gap: 20px; justify-content: center;
+    }
+    .course-card {
+      background: #fff; border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px; padding: 20px;
+    }
+    .card-header {
+      font-weight: bold; font-size: 1.05em;
+      padding: 10px; color: #fff;
+      border-radius: 6px 6px 0 0;
+    }
+    .angular { background-color: #dd1b16; }
+    .react { background-color: #61dafb; color: #000; }
+    .mean { background-color: #4caf50; }
+    .mern { background-color: #3f51b5; }
+    .UI { background: #007acc; }
+    .PY { background: #e65100; }
+    .VUEJS { background: #42b883; }
+    .W { background: #21759b; }
+
+    .badge {
+      background: gold; color: #000;
+      padding: 2px 6px; font-size: 0.75em;
+      border-radius: 4px; float: right;
+    }
+    .card-body {
+      font-size: 0.9em; color: #333;
+      margin: 10px 0 15px;
+    }
+    .card-footer {
+      font-size: 0.85em; color: #555;
+      display: flex; justify-content: space-between;
+      align-items: center;
+    }
+    .stars { color: orange; font-weight: bold; }
+
+    .contact-banner {
+      background: linear-gradient(to right, #9aeefc, #085dd9);
+      color: white; text-align: center;
+      padding: 40px 20px;
+    }
+    .contact-btn {
+      display: inline-block; padding: 12px 24px;
+      background-color: white; color: #085dd9;
+      text-decoration: none; font-weight: bold;
+      border-radius: 4px; transition: background 0.3s ease;
+    }
+    .contact-btn:hover { background-color: #e0e0e0; }
+
+    .site-footer {
+      background-color: #000; color: #fff;
+      padding: 40px 20px;
+    }
+    .footer-container {
+      display: flex; justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer-about, .footer-links, .footer-contact {
+      flex: 1 1 200px; margin: 20px;
+    }
+    .footer-links h4, .footer-contact h4 {
+      color: #e58c2b; margin-bottom: 10px;
+    }
+    .footer-links ul {
+      list-style: none; padding: 0;
+    }
+    .footer-links a {
+      color: #fff; text-decoration: none;
+    }
+    .footer-links a:hover { color: #e58c2b; }
+
+    .footer-bottom {
+      text-align: center; margin-top: 30px;
+      border-top: 1px solid #444; padding-top: 20px;
+    }
+    .footer-policy-links a {
+      color: #aaa; margin: 0 10px; text-decoration: none;
+    }
+    .footer-policy-links a:hover { color: #fff; }
+  </style>
 </head>
 <body>
 
@@ -42,114 +180,104 @@
   <section class="trending">
     <h2>TRENDING COURSES</h2>
     <div class="course-grid">
-      <!-- Example of one course card, duplicate as needed -->
       <div class="course-card">
         <div class="card-header angular">ANGULAR DEVELOPMENT COURSE <span class="badge">BEST SELLER</span></div>
-        <div class="card-body">Angular is popular for making dynamic applications and its informations official and reliance infusion includes altogether lessen the measure of code that should be composed.</div>
+        <div class="card-body">Angular helps build dynamic applications using a component-based architecture and dependency injection, reducing boilerplate code.</div>
         <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>5.0 (257)</span></div>
       </div>
       <div class="course-card">
-      <div class="card-header react">REACT DEVELOPMENT COURSE <span class="badge">BEST SELLER</span></div>
-      <div class="card-body">React JS Certification Course in Bangalore.We teach you detailed explanation of JSX, undirextional data flow and Flux, Components etc.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>5.0 (292)</span></div>
-    </div>
-
-    <div class="course-card">
-      <div class="card-header mean">MEAN STACK DEVELOPMENT COURSE</div>
-      <div class="card-body">"MEAN Stack Front To Back". In this course we will build an in depth full stack social network application using angular,express,React,Redux and MongoDB along with ES6+.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.5 (196)</span></div>
-    </div>
-
-    <div class="course-card">
-      <div class="card-header mern">MERN STACK DEVELOPMENT COURSE</div>
-      <div class="card-body">"MERN Stack Front To Back". In this course we will build an in depth full stack social network application using Node.js,express,React,Redux and MongoDB along with ES6+.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★</div> <span>4.5 (192)</span></div>
-    </div>
+        <div class="card-header react">REACT DEVELOPMENT COURSE <span class="badge">BEST SELLER</span></div>
+        <div class="card-body">React JS certification covers JSX, components, one-way data flow, and hands-on project training.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>5.0 (292)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="card-header mean">MEAN STACK DEVELOPMENT COURSE</div>
+        <div class="card-body">Build full-stack web apps using Angular, Express, MongoDB, and Node.js with real-world projects.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.5 (196)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="card-header mern">MERN STACK DEVELOPMENT COURSE</div>
+        <div class="card-body">Create full-stack apps with MongoDB, Express, React, and Node.js including Redux state management.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★</div> <span>4.5 (192)</span></div>
+      </div>
     </div>
   </section>
-  <section class="recent addition">
+
+  <!-- Recent Additions -->
+  <section class="recent-addition">
     <h2>RECENT ADDITIONS</h2>
     <div class="card-grid">
       <div class="course-card">
-      <div class="card-header UI">UI DEVELOPMENT COURSE</div>
-      <div class="card-body">UI development course in bangalore,you will be able the concepts such as CSS,HTML,JavaScript,Bootstrap,HTML5,JQuery,Angular/REactJS etc.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★</div> <span>4.0 (192)</span></div>
-    </div>
-    <div class="course-card">
-      <div class="card-header PY ">PYTHON DEVELOPMENT COURSE</div>
-      <div class="card-body">python development course in Big data,Machine Learing and Data Scince using Python programming certification course authorize every one to study data science approach from basics.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.5 (194)</span></div>
-    </div>  
-     <div class="course-card">
-      <div class="card-header VUEJS ">VUEJS DEVELOPMENT COURSE</div>
-      <div class="card-body">VueJs framework that is going a reputation as being a lightweight alternative framework and libraries VueJs is prograssive javascript framework with a librabry to build internative web interface.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.3 (144)</span></div>
-    </div>  
-     <div class="course-card">
-      <div class="card-header W ">WORDPRESS DEVELOPMENT COURSE</div>
-      <div class="card-body">WordPress certification traning course in bangalore is one of the best traning program by well-experienced software professionals.wordpress is considered as a robust content management system that allows users to manage direct.</div>
-      <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.6 (154)</span></div>
-    </div>  
+        <div class="card-header UI">UI DEVELOPMENT COURSE</div>
+        <div class="card-body">Covers HTML, CSS, JavaScript, Bootstrap, jQuery, and modern JS frameworks like React and Angular.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★</div> <span>4.0 (192)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="card-header PY">PYTHON DEVELOPMENT COURSE</div>
+        <div class="card-body">Python with Big Data, Machine Learning, and Data Science. Learn from basics to advanced projects.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.5 (194)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="card-header VUEJS">VUEJS DEVELOPMENT COURSE</div>
+        <div class="card-body">Vue.js is a lightweight, progressive framework for building interactive web interfaces and SPAs.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.3 (144)</span></div>
+      </div>
+      <div class="course-card">
+        <div class="card-header W">WORDPRESS DEVELOPMENT COURSE</div>
+        <div class="card-body">Learn to build websites using WordPress CMS with themes, plugins, and SEO integration.</div>
+        <div class="card-footer">Reviews <div class="stars">★★★★★</div> <span>4.6 (154)</span></div>
+      </div>
     </div>
   </section>
-  <!--cantact us-->
+
+  <!-- Contact Us -->
   <section class="contact-banner">
-    <h2>Enroll, Learn, Grow, Repeat! Get ready to achieve your learning goals with Acheivers IT</h2>
+    <h2>Enroll, Learn, Grow, Repeat! Get ready to achieve your learning goals with AchieversIT</h2>
     <a href="#contact" class="contact-btn">CONTACT US</a>
   </section>
-  <!--footer-->
+
+  <!-- Footer -->
   <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-about">
-      <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AchieversIT Logo" class="footer-logo">
-      <p>AchieversIT - Provides a wide group of opportunities for freshers and experienced candidates who can develop their skills and build their career opportunities across multiple companies.</p>
+    <div class="footer-container">
+      <div class="footer-about">
+        <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AchieversIT Logo" class="footer-logo">
+        <p>AchieversIT offers top-tier training for freshers and experienced professionals to enhance their skills and secure career opportunities.</p>
+      </div>
+      <div class="footer-links">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Placements</a></li>
+          <li><a href="#">Corporate Training</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>TRENDING COURSES</h4>
+        <ul>
+          <li><a href="#">UI Development</a></li>
+          <li><a href="#">Angular JS</a></li>
+          <li><a href="#">React JS</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Python</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>CONTACT INFO</h4>
+        <p>#63, 1st Floor, BTM 1st Stage, Bangalore, India - 560029</p>
+        <p>📞 +91 8431-040-457</p>
+        <p>✉️ info@achieversit.com</p>
+      </div>
     </div>
-    
-    <div class="footer-links">
-      <h4>COMPANY</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Placements</a></li>
-        <li><a href="#">Corporate Training</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>© 2025 AchieversIT. All Rights Reserved</p>
+      <div class="footer-policy-links">
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Use</a> |
+        <a href="#">Refund Policy</a>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <h4>TRENDING COURSES</h4>
-      <ul>
-        <li><a href="#">UI Development Course</a></li>
-        <li><a href="#">Angular JS Course</a></li>
-        <li><a href="#">React JS Course</a></li>
-        <li><a href="#">Digital Marketing Course</a></li>
-        <li><a href="#">Python Course</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-contact">
-      <h4>CONTACT INFO</h4>
-      <p>#63, 1st Floor, 16th Main, 8th Cross, BTM 1st Stage, Bangalore, India - 560029</p>
-      <p>📞 +91 8431-040-457</p>
-      <p>✉️ info@achieversit.com</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 AchieversIT. All Rights Reserved</p>
-    <div class="footer-policy-links">
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Terms of Use</a> |
-      <a href="#">Refund Policy</a>
-    </div>
-  </div>
-</footer>
-<!-- Footer -->
-  <footer>
-    <div>📞 +91 8151000080</div>
-    <div>✉️ Request A Call Back</div>
-    <div>💬 Chat With US!</div>
   </footer>
-
 
   <!-- Carousel Script -->
   <script>
@@ -163,5 +291,6 @@
     prev.onclick = () => goToSlide(index = (index - 1 + slides.length) % slides.length);
     setInterval(() => goToSlide(index = (index + 1) % slides.length), 5000);
   </script>
+
 </body>
 </html>
