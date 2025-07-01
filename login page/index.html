@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html=en></html>
+<head>
+    <meta chartset="UTF-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <title>login page</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4e4376, #2b5876);
+    }
+    form {
+      background: rgba(255,255,255,0.9);
+      padding: 40px;
+      width: 360px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    form h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+    label { display: block; margin-bottom: 6px; font-weight: 600; color: #555; }
+    input, select {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    input:focus, select:focus {
+      border-color: #4e4376;
+      outline: none;
+    }
+    .gender-group, .skills-group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .gender-group label, .skills-group label {
+      margin: 0;
+      font-weight: 400;
+      align-items: center;
+      display: flex;
+      gap: 4px;
+    }
+    button[type="submit"],
+    button[type="reset"] {
+      width: calc(50% - 6px);
+      padding: 10px;
+      margin-right: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button[type="submit"] {
+      background: #4e4376;
+      color: #fff;
+    }
+    button[type="submit"]:hover {
+      background: #2b5876;
+    }
+    button[type="reset"] {
+      background: #ccc;
+    }
+    button[type="reset"]:hover {
+      background: #aaa;
+    }
+  </style>
+</head>
+<body>
+    <form action="#" method="post" enctype="multipart/form-data" >
+    <h1>HTML Login</h1>
+    
+    <label for="firstname">FirstName:</label>
+    <input type="text" id="firstname" size="20" autofocus requried><br><br>
+
+    <label for="seconedname">SecondName:</label>
+    <input type="text" id="seconedname" requried><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" requried><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password"  requried><br><br>
+
+    <label for="resume">Resume:</label>
+    <input type="file" id="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+    <label for="phoneNumber">PhoneNumber:</label>
+    <input type="tel" id="phoneNumber" pattern="[6-9][0-9]{9}" required><br><br>
+
+    <label for="favcolor">Favouritecolor:</label>
+    <input type="color" id="favcolor"><br><br>
+
+    <label for="website">Our Website:</label>
+    <input type="url" id="website"><br><br>
+
+    <label for="bod">Date of Brith</label>
+    <input type="date" id="bod"><br><br>
+
+    <label for="gender">Gender:</label>
+
+    <label for="gendermale">Male</label>
+    <input type="radio" id="gendermale" name="gender" value="male">
+    <label for="genderfemale">Female</label>
+    <input type="radio" id="genderfemale" name="gender" value="female">
+    <label for="genderother">others</label>
+    <input type="radio" id="genderother" name="gender" value="others"><br><br>
+
+    <label for="skills">Skills:</label>
+     <label for="Skills">python</label>
+    <input type="checkbox" id="Skills" name="skills" value="python">
+    <label for="skills">Java</label>
+    <input type="checkbox" id="Skills" name="skills" value="java">
+    <label for="skills">HTML</label>
+    <input type="checkbox" id="Skills" name="skills" value="HTML">
+    <label for="skills">css</label>
+    <input type="checkbox" id="skills" name="skills" value="css">
+    <label for="skills">JavaScript</label>
+    <input type="checkbox" id="skills" name="skills" value="Javascript"><br><br>
+
+    <label for="Language">Language:</label>
+    <label for="Language">English</label>
+    <input type="range" id="Language" name="Language" value="English" step="10"><br><br>
+
+    <label for="search">Searching</label>
+    <input type="search" id="search" palceholder="searching" disable><br><br>
+
+    <label for="city">City-Name:</label>
+    <select id="city" name="city" datalist>
+        <option value="Hyderabad">Hydersabad</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="chennai">Chennai</option>
+        <option value="Mumbai">Mumbai</option>
+    </select> <br><br>
+
+    <input type="Submit" >
+    <input type="Reset">
+
+    </form>
+</body>
+</html>
