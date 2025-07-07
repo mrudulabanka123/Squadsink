@@ -5,7 +5,7 @@
         <meta name="viewport" content="width device=width,inital-scale=1.0">
         <title>CSS slectors</title>
         <style>
-            div{
+            /*div{
                 border-image-width: 20px;
                 image-rendering: auto;
               }
@@ -54,7 +54,7 @@
                 
 
 
-            }
+            }*/
             .jps{
                 text-align:left;
                 text-decoration:underline;
@@ -86,13 +86,42 @@
 
                         
             }
+            [type=name]{
+                background-color:green;
+            }
+            input[type=name]{
+                border-radius:30px;
+            }
+            input[type^=t]{
+                border-color:chartreuse;
+            
+            }
+            img[alt$=pic]{
+                width:100px;
+                height:100px;
+            }
+            img[alt*=p]{
+                border-radius:50%;
+                width:200px;
+                height:200px;
+            }
+            div>p{
+                color:red;
+            }
+            div p{
+                color:aqua;
+            }
+            h1+p{
+                color:blue;
+            }
+            div~p{
+                color:brown;
+            }
 
         </style>
     </head>
-    <body>
-        <div>
-        <img src="https://static.vecteezy.com/system/resources/previews/010/994/431/non_2x/puma-logo-black-symbol-with-name-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg "alt="logo of puma"/>
-        </div>
+    <body> 
+        
     <p> universal slectors are used the hole website</p><br>
 
 
@@ -102,6 +131,33 @@
     </div><br><br>
     <h1>grouping tag is the same proparties in the same two tages so we used this grouping tag</h1><br><br>
     <h2 class="jps">also the grouping tag</h2><br><br>
-    <p id="kps">this also grouping tag</p>
+    <p id="kps">this also grouping tag</p><br><br>
+
+    <section>
+        <input type="name" reduried>
+        <input type="name" palceholder="last name">
+        <input type="text" readonly>
+        <input type="tel" palceholder="you phoneno">
+        <img src="https://images.pexels.com/photos/32703696/pexels-photo-32703696.jpeg" alt="duck pic">
+        <img src="https://images.pexels.com/photos/31701360/pexels-photo-31701360.jpeg" alt="shooting pic">
+    </section><br><br>
+<!--combinator selector-->
+   <div>
+    <div>
+        <p>i am grad child1<p>
+    </div>
+    <h1>i am mrudula</h1>
+    <p>this para 1</p>
+    <span></span>
+    <p>this my combinator selctor section</p>
+   </div>
+   <div>
+    <h1>this the anthor section</h1>
+    <div>
+        <p>i am grand child</p>
+    </div>
+    <p>contain the combinator</p>
+    <code>in this sction code available</code>
+   </div>
     </body>
 </html>
