@@ -78,13 +78,37 @@
                 font-family:'Courier New', Courier, monospace;
                 font-weight:bold;
                 background-color:rgb(29, 73, 111);
-                color:red;
                 justify-content:column;
                 flex-direction:column;
                 box-shadow:2px 5px black;
                 border-radius:10px;
 
                         
+            }
+            a:link{
+                  color:green;
+            }
+            a:visited{
+                color:aqua
+            }
+            .name:hover{
+                color:red;
+                background-color:yellow;
+            }
+            li:first-child{
+                color:darkcyan;
+            }
+            li:last-child{
+                color:rgb(246, 10, 163);
+            }
+            li:nth-child(3){
+                 color:red;
+            }
+            .peseudoE::first-letter{
+               color:rgb(200, 14, 95);
+            }
+            .pe::before{
+                content:counter(name)
             }
             [type=name]{
                 background-color:green;
@@ -108,13 +132,13 @@
             div>p{
                 color:red;
             }
-            div p{
+            div~p{
                 color:aqua;
             }
-            h1+p{
+            h1 p{
                 color:blue;
             }
-            div~p{
+            div+p{
                 color:brown;
             }
 
@@ -129,10 +153,28 @@
     <div>
         <h4 class="btn">class selector is used for the centain classes to style the class</h4>
     </div><br><br>
+
     <h1>grouping tag is the same proparties in the same two tages so we used this grouping tag</h1><br><br>
     <h2 class="jps">also the grouping tag</h2><br><br>
     <p id="kps">this also grouping tag</p><br><br>
-
+    <!--pesuedo class-->
+    <a href="https://www.youtube.com/watch?v=XSA6v9rCQFo">click</a>
+    <a href="https://web.whatsapp.com/">antherClick</a><br><br>
+    <h3 class="name">this hover slector used</h3><br><br>
+    <div>
+        <ol>
+            <li>first list</li>
+            <li>second list</li>
+            <li>thired list</li>
+            <li>fouth list</li>
+            <li>fith list</li>
+        </ol>
+    </div>
+    <!--peseudo element-->
+    <h4 class="peseudoE"> peseudo element is the another slectors in the css</h4>
+    <p class="pe">peseudo elemnets are the after and before are used in this css</p>
+    <h4 >peseudo elemnt is the second line</h4>
+      <!--attribute slector-->
     <section>
         <input type="name" reduried>
         <input type="name" palceholder="last name">
@@ -155,8 +197,10 @@
     <h1>this the anthor section</h1>
     <div>
         <p>i am grand child</p>
+        <p>i am nother child</p>
     </div>
     <p>contain the combinator</p>
+    <p>contain the adjcombinator</p>
     <code>in this sction code available</code>
    </div>
     </body>
