@@ -1,0 +1,12 @@
+header{
+    background-color:black;
+    
+}
+.logo{
+    display: flex
+}
+
+.navbar a{
+    text-decoration: none;
+    padding-top:20px;
+}

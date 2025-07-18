@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        header{
+          display:grid;
+        
+        }
+        .grid{
+        grid-template-columns: 20% 20% 20% 20%;
+        display:grid;
+    }
+        .nav{
+            display:grid;
+            grid-template-columns: 10px 20px 10px 20px;
+            list-style: none;
+            column-gap: 40px;
+            padding-top:20px;
+            
+        }
+        .icons{
+          display:grid;
+          grid-template-columns: repeat(4,auto);
+          list-style: none;
+          column-gap: 20px;
+          padding-top:20px;
+          padding-left: 200px;
+        }
+        /* .search{
+            /* width:200px;
+            height:20px;
+            border:2px solid black; 
+            border-radius: 30px;
+            padding-top:80x;
+
+        }  */
+        .search1{
+            display: flex;
+            grid-template-columns: auto auto;
+            padding:30px 200px; 
+            column-gap: 50px;
+            
+        }
+        input{
+            border-radius: 30px;
+        }
+          .sub1{
+         
+         /* width:80px;
+            height:10px;
+            border:2px solid black; */
+            padding-top:40px;
+        
+             /* background-color: black; */
+            
+          }
+         
+       /* .sub1{
+            display: flex;
+            padding:20px;
+            color:white;
+        }   */
+        section{
+            background-color:lightgray;
+            border: 2px 2px 2px 2px;
+            border-color:lightgray;
+            border-style:solid;
+            width:auto;
+            height:600px;
+        }
+        .border{
+            background-color:white;
+            width:1100px;
+            height: 300px;
+            margin: auto;
+            border-radius: 30px;
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        
+
+        }
+        .img1{
+            width:500px;
+            height:280px;
+            border-radius: 30px;
+            padding-left: 10px;
+            padding-top:10px;
+        }
+        .lay{
+            padding-top:40px;
+            padding-right:90px;
+        }
+        .b1{
+            border-radius: 30px;
+            color:rgb(226, 43, 150);
+            border-color:none;
+            border-style:none;
+        }
+        .simg{
+            width:50px;
+            height:50px;
+            border-radius: 50px;
+        
+        }
+        .simg1{
+            display:flex;
+        }
+       /* display:flex;
+        } .flex{
+             */
+            .flex{
+                /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: none; */
+  display: grid;
+  grid-template-columns: 800px 70px;
+  column-gap: none;
+
+            }
+.cv,
+.icons1,
+.pc,
+.buto,
+.line1,
+.last {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+}
+        .subclass,.subclass1{
+            background-color:white;
+            width:600px;
+            height: 200px;
+            margin: auto;
+            border-radius: 30px;
+         display:flex;
+           gap:none;
+           /* display: grid;
+           grid-template-columns: 1fr;
+           row-gap:5px;*/
+        } 
+        .img2,.img3{
+            width:400px;
+            height:180px;
+            border-radius: 30px;
+            padding-left: 10px;
+            padding-top:10px;
+        }
+        .lay2,.lay3{
+            padding-top:30px;
+        }
+        /* .b21{
+            /* border-radius: 30px;
+            color:blue;
+            /* width:50px;
+            height:10px; 
+            border-style:none;
+            font-weight: 500;
+            padding:20px; */
+             /* border-radius: 30px;
+            color:rgb(226, 43, 150); */
+            /* border-color:none; 
+            border-style:none;
+
+        } */
+        .b2{
+            border-radius: 30px;
+            color:blue; 
+            border-style: none;
+            /* margin:20px; */
+        }
+        .b21{
+            border-radius: 30px;
+            color:green; 
+            border-style: none;
+            margin:20px;
+        }
+        .b3{
+            border-radius: 30px;
+            color:green; 
+            border-style: none;
+        }
+        .b31{
+           border-radius: 30px;
+            color:rgb(128, 0, 85); 
+            border-style: none;
+            margin:20px;
+        }
+         .simg3,.simg31,.simg313,.simg3131{
+            width:50px;
+            height:50px;
+            border-radius: 50px;
+        
+        }
+         .simg2,.simg21,.simg212,.simg2121{
+            display:flex;
+        }
+        .header1{
+          background-color:lightgray;
+            border: 2px 2px 2px 2px;
+            border-color:lightgray;
+            border-style:solid;
+            width:auto;
+            height:1000px;
+            display:grid;
+            grid-template-columns: 1fr;
+        }
+         .cr{
+            margin:auto;
+            text-align: center;
+            padding-bottom:200px ;
+        }
+        .cr button{
+            border-radius: 30px;
+            border-style: none;
+            border-color:gray ;
+        }
+        /* .cv{
+            display: flex;
+        } */
+        .bar{
+            background-color:lightgray;
+            width:1400px;
+            height:350px;
+            border:2px solid lightgray;
+        }
+       .bar1{
+         background-color:lightgray;
+            width:1400px;
+            height:100px;
+            border:2px solid lightgrey;
+            display: flex;
+       }
+        .cp,.cp1{
+            border:1px solid lightgray;
+            width:400px;
+            height:350px;
+            text-align:left;
+            padding:20px; 
+        }
+        .imgcp,.imgcp1,.imgcp2{
+            width:400px;
+            height:200px;
+           border-radius: 30px;
+        }
+        .author{
+            padding-left: 100px ;
+        }
+        .Authors{
+            font-weight: 100px;
+        }
+        /* .buto{
+            display:flex;
+            column-gap: 1100px;
+        } */
+        .All{
+            background-color: lightgray;
+            width: auto;
+            height: auto;
+        }
+        .Browse{
+            border: 2px solid rgb(145, 145, 153);
+            width:200px;
+            height:auto;
+            background-color: lightgray;
+             margin: auto;
+            border-radius: 30px;
+        }
+        .button{
+         text-align: center;
+            /* padding-right:10px; */
+        }
+        .Line{
+          border-color: black;
+          border-width: 0px 0px 0px 0px;
+         border-style: solid;
+          width:1400px;
+          height:100px;
+          padding-left: 30px;
+          background-color:lightgray;
+          /* flex-wrap: center; */
+          display: flex; 
+          
+          column-gap: 300px;
+        }
+        .line{
+          border-color: black;
+          border-width: 2px 0px 0px 0px;
+         border-style: solid;
+          width:1400px;
+          height:10px;
+          padding-left: 30px;
+          background-color:lightgray;
+          
+          } 
+    .line1{
+        border-color: black;
+        border-radius: 30px;
+         border-style: solid;
+          width:600px;
+          height:100px;
+          padding-left: 30px;
+          background-color:rgb(200, 168, 168);
+        /* display:flex; */
+    }
+    .simg9{
+        width:80px;
+        height:80px;
+        border-radius: 50%;
+        padding-top:10px;
+
+    }
+   .last{
+    border: 2px solid lightgrey;
+    width:1400px;
+    height:200px;
+    border-color: lightgrey;
+    box-shadow: 10px 0px 10px 0px;
+    border-radius: 30px;
+    margin:30px;
+     display: flex; 
+   }
+   .ftext{
+    padding-left: 30px;
+    padding-top: 30px;
+   }
+   .navs{
+    padding-left:500px;
+    padding-top:90px;
+   }
+   .sube{
+    /* border-radius: 10px;
+    border: 1px solid black;
+    width:100px;
+    height:auto; */
+    background-color: black;
+    /* color:white; */
+    color:white;
+    /* padding-left: 20px; */
+   }
+      .ico{
+       
+      }  
+      .icons1{
+            display:flex;
+            padding-left:1200px;
+        
+      }
+      .pc{
+        display: flex;
+    padding-left:600px;
+        margin-top: -50px;
+        column-gap: 10px;
+      } 
+      .zero{
+        margin-top:-50px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="grid">
+        <div class="logo">
+            <img src="../indian/imges/logo.png" alt="logo">
+        </div>
+        <div>
+            <ul class="nav">
+                <li>Home</li>
+                <li>Pages</li>
+                <li>Blogs</li>
+                <li>Support</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+            </ul>
+        </div>
+         <div class="search1">
+         <!-- <div class="searchs"> -->
+            <!-- <p>Search Here</p>
+        </div>  -->
+        <div class="input1">
+        <input type="search" placeholder="Search here">
+        <!-- </div> -->
+    </div>
+        <!-- <div class="sub1">
+             <div class="sub1">
+            <p>subscribe</p>
+        </div>  
+    </div>-->
+         <button class="sube">Subcribe</button>
+    </div>
+    </div>
+    </header>
+    <section class="main">
+        <div class="border">
+            <img class="img1" src="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg" alt="build">
+            <div class="lay">
+                <button class="b1">Lifecycle</button>
+            <h2>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem por incident ut </h2>
+             <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem por incident ut lab external mixted hnmv mhnh</p>
+            <div class="simg1">
+            <img class="simg" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            </div>
+        </div>
+        </div><br><br>
+        <div class="flex">
+        <div class="subclass">
+            <img class="img2" src="https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg" alt="lwomen">
+            <div class="lay2">
+                <button class="b2">Technology</button>
+            <p><b>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</b> </p>
+            <div class="simg2">
+            <img class="simg3" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            </div>
+
+        </div>
+        </div>
+        <div class="subclass1">
+            <img class="img3" src="https://images.pexels.com/photos/7235803/pexels-photo-7235803.jpeg" alt="lwomen">
+            <div class="lay3">
+                <button class="b3">Travel</button>
+            <p><b>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</b> </p>
+            <div class="simg21">
+            <img class="simg31" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section><br>
+    
+    <section class="header1">
+        <div class="cr">
+            <h2>Browse By category</h2>
+            <p><b>Select category to see man related concert</b></p>
+            
+            <button>All(20)</button>
+            <button>lifestyle(02)</button> <button>Teavel(05)</button> <button>Health(09)</button> <button>culture(01)</button> <button>technology(03)</button>
+
+            <div class="bar">
+                <div class="cv">
+            <div class="cp">
+            <img class="imgcp"src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg" alt="build2">
+            <h4>Lorem ipsum dolor site amet consectecture</h4>
+            <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+             <div class="simg212">
+            <img class="simg313" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            <div>
+            <button class="b21">Techonology</button>
+            </div>
+            </div>
+            </div>
+             <div class="cp1">
+            <img class="imgcp1"src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="build2">
+            <h4>Lorem ipsum dolor site amet consectecture</h4>
+            <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+             <div class="simg2121">
+            <img class="simg3131" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            <div>
+            <button class="b21">Techonology</button>
+            </div>
+            </div>
+        </div>
+        <div class="cp1">
+            <img class="imgcp1"src="https://images.pexels.com/photos/6981024/pexels-photo-6981024.jpeg" alt="build2">
+            <h4>Lorem ipsum dolor site amet consectecture</h4>
+            <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+             <div class="simg2121">
+            <img class="simg3131" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            <div>
+            <button class="b21">Techonology</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div><br><br>
+        <div class="bar1">
+            <div class="cp">
+            <img class="imgcp1"src="https://images.pexels.com/photos/17828687/pexels-photo-17828687.jpeg" alt="build2">
+            <h4>Lorem ipsum dolor site amet consectecture</h4>
+            <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+             <div class="simg2121">
+            <img class="simg3131" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            <div>
+            <button class="b21">Techonology</button>
+            </div>
+            </div>
+        </div>
+            <div class="cp">
+            <img class="imgcp1"src="https://images.pexels.com/photos/6436747/pexels-photo-6436747.jpeg" alt="build2">
+            <h4>Lorem ipsum dolor site amet consectecture</h4>
+            <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+             <div class="simg2121">
+            <img class="simg3131" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            <div>
+            <button class="b21">Travel</button>
+            </div>
+            </div>
+        </div>
+        <div class="cp">
+            <img class="imgcp1"src="https://images.pexels.com/photos/12935088/pexels-photo-12935088.jpeg" alt="build2">
+            <h4>Lorem ipsum dolor site amet consectecture</h4>
+            <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+             <div class="simg2121">
+            <img class="simg3131" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+            <p>Lorem ipsum dolor </p>
+            <p>sep 20,2025</p>
+            <div>
+            <button class="b21">Lifecycle</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+<div class="All">
+<div class="Browse">
+            <p class="button">Browse All</p>
+        </div>
+    </div>
+<section>
+    <div class="buto">
+                 <div class="author">
+            <h4>TopAuthor</h4>
+            
+        </div>
+        <div class="Authors">
+            <h5>AllAuthors</h5>
+        
+        </div>
+        </div>
+    <hr class="line">
+     <div class="Line"> 
+    <div class="line1">
+        <img class="simg9" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+        <div class="text">
+        <h4>Arived rao</h4>
+        <p>njdn ufn tyh bjmmk</p>
+    </div>
+    </div>
+    <div class="line1">
+        <img class="simg9" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+        <div class="text">
+        <h4>Arived rao</h4>
+        <p>njdn ufn tyh bjmmk</p>
+    </div>
+    </div>
+    <div class="line1">
+        <img class="simg9" src="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg" alt="smallimg">
+        <div class="text">
+        <h4>Arived rao</h4><p>njdn ufn tyh bjmmk</p>
+    </div>
+    </div>
+    </div><br><br>
+    <footer>
+        <div class="last">
+            <div class="ftext">
+                <h1>Subcribe the Newsletter</h1>
+                <p>Lorem ipsum dolor site amet consectecture adipising elit sed so aliun tem</p>
+                 <p>site amet consectecture adipising elit sed </p>
+            </div>
+            <div class="navs">
+                <input type="search" placeholder="Enter your Email address" >
+                <button class="sube">Subcribe</button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    </section>
+    <div>
+
+        <div class="ico"> 
+            <div class="icons1"> 
+        
+            <div>
+            <p>Follow on:</p>
+        </div>
+            <ul>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+            </ul>
+            </div>
+            <div class="pc">
+            <p>Privacy</p><br>
+            <p>Policy</p><br>
+            <p>connect</p><br>
+            <p>contribute</p>
+            </div>
+    <div class="zero">
+        <div class="Vue">
+            <p>@ 2025 AchieversIT.All Rights Reserved</p>
+        </div>
+        </div>
+        </div>
+        </div>
+</body>
+</html>
