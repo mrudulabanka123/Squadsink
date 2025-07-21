@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .form{
+    background-color: lightcoral;
+    width:700px;
+    height:800px;
+    margin: auto;
+      }
+      
+      .roll,.student,.father,.dob,.moblie,.email,.password,.gender,.dep,.selct,.resume,.city,.address{
+        margin-top: 10px;
+        margin-left:20px;
+      }
+      .sub{
+        margin-left:300px
+      }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="form">
+            <div class="roll">
+            <label for id="Rollno">Roll no:</label>
+            <input type="text">
+            </div>
+            <div class="student">
+                <label for id="student">Student name:</label>
+                <input type="text" placeholder="FirstName">
+                <input typle="text" placeholder="LastName">
+            </div>
+         <div class="father">
+            <label for id="father">Father Name:</label> 
+            <input type="text">
+            </div>
+            <div class="dob">
+                <lable for id="bod">Date of brith:</lable>
+                <input type="number" placeholder="Day" style="width:40px" >
+                <input type="number" placeholder="month"style="width:40px">
+                <input type="number" placeholder="Year">(DD-MM-YYYY)
+            </div>
+            <div class="moblie">
+                <lable for id="mobile">Mobile no:</lable>
+                <input type="number" placeholder="+91" style="width:40px">
+                <input type="text" >
+            </div>
+            <div class="email">
+                <lable for id="email">Email:</lable>
+                <input type="email">
+            </div>
+            <div class="password">
+                <lable for id="pass">password</lable>
+                <input type="password">
+            </div>
+            <div class="gender">
+                <label for id="gender">Gender:</label>
+                <input type="radio">Male
+                <input type="radio">FeMale
+            </div>
+            <div class="dep">
+                <lable for id="dep">Department:</lable>
+                <input type="checkbox">CSE
+                 <input type="checkbox">IT
+                  <input type="checkbox">ECE
+                   <input type="checkbox">CIVIKL
+                    <input type="checkbox">MECH
+            </div>
+            <div class="selct">
+                <label for id="sel">Course:</label>
+                <input type="text" placeholder="----select current course's----">
+            </div>
+            <div class="resume">
+            <label>Student photo : </label>
+    <input type="file">
+</div class="city">
+<div>
+    <label>City : </label>
+    <input type="text">
+</div>
+<div class="address">
+    <label >Address : </label>
+    <input type="text" style="width:300px;height:40px">
+</div><br><br>
+<div class="sub">
+    <button type="submit">Register</button>
+</div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./about-us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    
+ * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { color: #333; background: #fff; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #1d1d1d; color: #fff; padding: 1rem 2rem;
+
+    }
+    nav ul { display: flex;
+      justify-content: center; align-items: center; column-gap: 2rem;
+    text-decoration: none; }
+    /* nav li { cursor: pointer; } */
+    nav a{
+      color:white;
+      text-decoration: none;
+      font-weight: 200px;
+      font-size: larger;
+      column-gap: 5rem;
+      margin-left:20px;
+    }
+    a:hover{
+    color:red;
+    }
+.heading{
+    background-color: #00acee;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 300px;
+    padding: 10px;
+  
+}
+.heading{
+    padding-left: 80px;
+    padding-top: 100px;
+    color: white;
+    font-size: 20px;
+  
+}
+.location-section{
+    text-align: center;
+    margin-top: 20px;
+}
+.location-heading{
+    font-size: 40px;
+}
+.address-cards{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.locations{
+    border: 1px solid #e0e0e0;
+    width: 350px;
+    height: 200px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius:12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    
+}
+.locations span{
+    font-size: 20px;   
+    text-align: center;
+}
+.location-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.locations p{
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.footer-end {
+  background-color: #101010;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Footer About */
+.footer-about {
+  flex: 1 1 250px;
+ 
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  font-size: 17px;
+  color: rgb(144, 133, 133);
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  flex: 2 1 400px;
+  gap: 40px;
+}
+
+.footer-column {
+  min-width: 160px;
+}
+
+.footer-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #cccccc;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+/* Footer Contact */
+.footer-contact {
+  flex: 1 1 250px;
+}
+
+.footer-address,
+.footer-phone,
+.footer-email {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 20px;
+text-align: center;
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  margin-right: 15px;
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #00acee;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  color: #cccccc;
+  font-size: 18px;
+}
+
+.footer-policy {
+  color: #cccccc;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.footer-policy:hover {
+  text-decoration: underline;
+}
+
+/* Support Strip */
+.footer-support-strip {
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+  background-color: #222222;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 25px;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-support-strip .footer-call a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-support-strip .footer-whatsapp a{
+  color:rgb(48, 30, 240);
+  text-decoration: none;
+}
+
+.footer-support-strip a:hover {
+  text-decoration: underline;
+}
+
+.footer-call,
+.footer-callback,
+.footer-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+</style>
+</head>
+<body>
+  <button>contact us</button>
+   <header>
+ <a href="./index.html">    <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AchieversIT Logo"></a>
+    <nav>
+      <ul>
+        <a href="">All courses</a>
+        <a href="./placements.html">Placements</a>
+        <a href="./internship.html">Internship</a>
+        <a href="">Existing Student</a>
+        <a href="./reviews.html">Review</a>
+        <a href="./about.html">About us</a>
+        <a href="./blogs.html">Blog</a>
+      
+      </ul>
+    </nav>
+  </header>
+  <div class="heading">
+    <h1>Contact Us</h1><br><br>
+    
+  </div>
+  <!-- <section class="banner">
+    <h1>Contact Us</h1>
+  </section> -->
+    <!-- map -->
+  <div class="location-section">
+    <div class="location-heading"><b>Locations</b></div>
+    <div class="location-subheading">
+      Come and discuss with us about your goals, We transform your goals into success!!!
+    </div>
+    <div class="location-area">Marathahalli - Bangalore</div>
+    <div class="address-text">
+      #1, 4th Main Rd, Extension, Ayyappa Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2781343986016!2d77.6945089750733!3d12.956661215960246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13f4e716cb1d%3A0xe5aa9e5db4e4c8a9!2sAchieversIT!5e0!3m2!1sen!2sin!4v1598610150174!5m2!1sen!2sin"
+        width="800"
+        height="450"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0">
+      </iframe>
+    </div>
+  </div>
+
+  <section class="address-cards">
+    <div class="locations">
+      <div class="location-name">
+         <i class="fa-solid fa-location-pin" style="color: #b5260d;"></i>  <span><strong>BTM Layout - Bangalore</strong></span>
+      </div>
+      <p>#63, 1st Floor, 16th Main, 8th Cross BTM 1st Stage, BTM Layout, Bengaluru, Karnataka 560029</p>
+    </div>
+
+    <div class="locations">
+      <div class="location-name">
+        <i class="fa-solid fa-location-pin" style="color: #b5260d;"></i>  <span><strong>Marathahalli - Bangalore</strong></span>
+      </div>
+      <p>#1, 4th Main Rd, Extension, Ayyappa Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037</p>
+    </div>
+
+    <div class="locations">
+      <div class="location-name">
+        <i class="fa-solid fa-location-pin" style="color: #b5260d;"></i>  <span><strong>Kukatpally - Hyderabad</strong></span>
+      </div>
+      <p>#101,Vandana's Trade Center, Beside Padmavathi Plaza, Above Union Bank,Kukatpally,Hyderabad 500072</p>
+    </div>
+
+    <div class="locations">
+      <div class="location-name">
+         <i class="fa-solid fa-location-pin" style="color: #b5260d;"></i>   <span><strong>Mumbai - Maharasthra</strong></span>
+      </div>
+      <p>Satra Plaza, Unit No. 1011, 10th Floor, Palm Beach, Rd Phase 2, Sector 14,19D, Vashi, Navi Mumbai, Maharashtra - 400703</p>
+    </div>
+
+    <div class="locations">
+      <div class="location-name">
+        <i class="fa-solid fa-location-pin" style="color: #b5260d;"></i>   <span><strong>Pune - Maharasthra</strong></span>
+      </div>
+      <p>Times Square, S-699/1, Near Saibaba Mandir, Pune-Satara Road, Pune -411037.</p>
+    </div>
+
+    <div class="locations">
+      <div class="location-name">
+        <i class="fa-solid fa-location-pin" style="color: #b5260d;"></i>  <span><strong>Chennai - Tamilnadu</strong></span>
+      </div>
+      <p>No 7, Dayasadan road, Opp Shell petrol pump, near Amma Unavagam, Nerkundrum, Chennai - 600 107</p>
+    </div>
+
+  </section>
+
+
+  <section class="footer-end">
+
+<div class="footer-wrapper">
+
+    <!-- Left: About Company -->
+    <div class="footer-about">
+      <img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="AchieversIT Logo" class="footer-logo">
+      <p class="footer-description">
+        AchieversIT - Provides a wide group of opportunities for freshers and experienced candidates who can develop their skills and build their career opportunities across multiple companies.
+      </p>
+    </div>
+
+    <!-- Middle: Navigation Links -->
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Placements</a></li>
+          <li><a href="#" class="footer-link">Corporate Training</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Trending Courses</h4>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">UI Development Course</a></li>
+          <li><a href="#" class="footer-link">Angular JS Course</a></li>
+          <li><a href="#" class="footer-link">React JS Course</a></li>
+          <li><a href="#" class="footer-link">Digital Marketing Course</a></li>
+          <li><a href="#" class="footer-link">Python Course</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="footer-contact">
+      <h4 class="footer-heading">Contact Info</h4>
+      <p class="footer-address">
+        #63, 1<sup>st</sup> Floor, 16<sup>th</sup> Main, 8<sup>th</sup> Cross,<br>
+        BTM 1<sup>st</sup> Stage, Bangalore, India – 560029
+      </p>
+      <p class="footer-phone">India: +91 8431-040-457</p>
+      <p class="footer-email">info@achieversit.com</p>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-legal">
+      <p>Copyright © 2025 AchieversIT. All Rights Reserved</p>
+      <a href="#" class="footer-policy">Privacy Policy</a>
+      <a href="#" class="footer-policy">Terms of Use</a>
+      <a href="#" class="footer-policy">Refund Policy</a>
+    </div>
+  </div>
+</section>
+  <!-- Support Strip -->
+  
+  <div class="footer-support-strip">
+    <div class="footer-call">
+      <i class="fa-solid fa-phone-volume"></i> Call us on : <a href="tel:+918151000080">+91 8151000080</a>
+    </div>
+    <div class="footer-callback">
+      <i class="fa-solid fa-envelope"></i> Request A Call Back
+    </div>
+    <div class="footer-whatsapp">
+    <i class="fa-brands fa-whatsapp" style="color: #297807;"></i><a href="#">Chat With Us!</a>
+    </div>
+  </div>
+ 
+</body>
+</html>

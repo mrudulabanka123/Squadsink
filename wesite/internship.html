@@ -58,23 +58,13 @@
       color:red;
     }
    
-    .sidbar{
-        border: 2px solid lightgrey;
-        width:250px;
-        height:300px;
-        margin-left:1100px ;
-        margin-top: -800px;
-        box-shadow: 0 0 10px rgb(102, 98, 98);
-        
+    .center{
+      margin-top: 10px;
+      margin-left: 100px;
+      margin-right: 100px;
+      align-items: center;
+      text-align: center;
     }
-    .sidbar img{
-        width:50px;
-        height:50px;
-    }
-    img .bar2{
-      display:flex;
-    }
-     
     .img1 img {
       width: 300px;
       height:200px;
@@ -86,26 +76,113 @@
       box-shadow: 0 0 10px black;
       transform: scale(1.05);
     }
-    .center{
-      margin-top: 500px;
-      margin-left: 100px;
-      margin-right: 100px;
-      align-items: center;
-      text-align: center;
-    }
-    .center h2{
+    
+     .review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .main-wrapper {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 10px;
+  }
+  
+  .ratings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .rating-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rating-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .rating-score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .rating-info {
+    color: #444;
+  }
+  
+  .course-section {
+    text-align: center;
+  }
+  
+  .course-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .course-section hr {
+    margin: 10px auto 20px;
+    width: 60%;
+    border: 1px solid #ccc;
+  }
+  
+  .course-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .icon-box {
+    width: 80px;
+    background: linear-gradient(to bottom right, #ff5f6d, #fc466b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    padding: 20px;
+  }
+  
+  .course-title {
+    flex: 1;
+    font-size: 18px;
+    color: #007bff;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  
+  .holesection{
+    display: flex;
+  }
+
+
+
+   
+    .location h2 {
       font-weight: 1000;
-      align-items: center;
     }
-   /* .img1{
-    flex-wrap: wrap;
-   } */
-    .center img{
-      width:300px;
-      height:200px;
-      /* margin-left:100px;
-      margin-right: 100px; */
-      column-gap: none;
+    .location{
+    
+     align-items:center;
+      text-align: center;
+      margin-left:300px;
+      margin-right: 100px;
+      
     }
     .location h2 {
       font-weight: 1000;
@@ -187,7 +264,8 @@
         <a href="./internship.html">Internship</a>
         <a href=>Existing Student</a>
         <a href="./reviews.html">Reviews</a>
-        <a href="./blogs.html">Blogs</a>
+        <a href="./about.html">About us</a>
+        <a href="./blogs.html">Blog</a>
       
       </ul>
     </nav>
@@ -196,7 +274,8 @@
     <h1>INTERNSHIP</h1><br><br>
     <h3>Home</h3>
   </div>
-  
+  <div class="holesection">
+  <div class="onesection">
   <section class="para">
     
     <h2>Internship at AchieversIT</h2><br>
@@ -225,17 +304,71 @@ If you are college fresher , most of the time people were not aware of the proce
 <li>Our consultants are real-time professionals with abundant experience in the IT industry on various skills.</li>
 <li>Our consultants are real-time professionals with abundant experience in the IT industry on various skills.</li></ul></p>
 </section>
-
-<section >
-    <div class="bar1">
-          
-        <div class="sidbar"><img src="https://www.achieversit.com/assets/images/review2.png" alt="google"><h3 class="bar2">4.9/5</h3><br><hr>
-       <img src="https://www.achieversit.com/assets/images/review4.png" alt=""><h3 class="bar2">9.0/10</h3><br><hr>
-        <img class="img"src="https://www.achieversit.com/assets/images/review3.png" alt=""><h3 class="bar2">4.0/5</h3></div><br>
-      
+</div>
+<div class="main-wrapper">
+    <div class="ratings-section">
+      <div class="rating-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google Logo">
+        <div class="rating-score">4.9 / 5</div>
+        <div class="rating-info">1280+ Google Reviews</div>
       </div>
-    </section>
-    <div class="center">
+      <div class="rating-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Logo">
+        <div class="rating-score">9.4 / 10</div>
+        <div class="rating-info">500+ Facebook Reviews</div>
+      </div>
+      <div class="rating-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Logo">
+        <div class="rating-score">4.0 / 5</div>
+        <div class="rating-info">400+ LinkedIn Reviews</div>
+      </div>
+    </div>
+    <div class="secsection">
+    <!-- COURSE CATEGORIES -->
+    <div class="course-section">
+      <h2>COURSE<br>CATEGORIES</h2>
+      <hr />
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+        <div class="course-title">UI<br>Development</div>
+      </div>
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fab fa-react"></i></div>
+        <div class="course-title">ReactJS</div>
+      </div>
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fas fa-chart-bar"></i></div>
+        <div class="course-title">Digital<br>Marketing</div>
+      </div>
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fas fa-globe"></i></div>
+        <div class="course-title">Web<br>Development</div>
+      </div>
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fab fa-python"></i></div>
+        <div class="course-title">Python</div>
+      </div>
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+        <div class="course-title">MEAN<br>Stack</div>
+      </div>
+
+      <div class="course-card">
+        <div class="icon-box"><i class="fas fa-cubes"></i></div>
+        <div class="course-title">MERN<br>Stack</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+ <div class="center">
     <h2>Internship Gallary</h2>
 <div class="img1">
 <img src="https://www.achieversit.com/assets/images/srana/corporate-workshop.jpg" alt="img1">
@@ -247,12 +380,24 @@ If you are college fresher , most of the time people were not aware of the proce
 <img src="https://www.achieversit.com/assets/images/srana/workshop-tech.jpeg" alt="img4">
 <img src="https://www.achieversit.com/assets/images/srana/workshop-presentation.jpeg" alt="img5">
 <br><br>
+</div>
+</div>
 <div class="location">
   <h2>Locations</h2>
 <h4>Come and discuss with us about your goals ,We transform your goals into success!!!<br>
 Marathahalli - Bangalore<br>
 #1, 4th Main Rd, Extension, Ayyappa Layout, Chandra Layout, Marathahalli, Bengaluru, Karnataka 560037</h4>
-<img src="https://imageconvert.org/uploads/Screenshot%202025-07-15%202318361752601817.jpg" alt="loc">
+<!-- <img src="https://imageconvert.org/uploads/Screenshot%202025-07-15%202318361752601817.jpg" alt="loc"> -->
+ <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2781343986016!2d77.6945089750733!3d12.956661215960246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13f4e716cb1d%3A0xe5aa9e5db4e4c8a9!2sAchieversIT!5e0!3m2!1sen!2sin!4v1598610150174!5m2!1sen!2sin"
+        width="800"
+        height="450"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0">
+      </iframe>
 </div>
 </div>
 </div>
@@ -260,6 +405,7 @@ Marathahalli - Bangalore<br>
     <div class="footer-container">
       <div class="footer-about">
         <img src="https://www.achieversit.com/assets/images/logo-white.png" alt="AchieversIT Logo" class="footer-logo">
+         
         <p>AchieversIT offers top-tier training for freshers and experienced professionals to enhance their skills and secure career opportunities.</p>
       </div>
       <div class="footer-links">
