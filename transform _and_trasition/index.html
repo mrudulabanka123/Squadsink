@@ -14,17 +14,19 @@
             border-bottom: 5px dotted;
             border-left: 20px solid;
             border-right: 20px solid;
+            transition: transform ;
+             /* transform: translateX(1000px); */
         
         }
 
-        .car {
+        h5 {
             border: 2px solid black;
             width: 50px;
             height: 50px;
           background-color:aqua;
-         
-          /* transition: transform 3.5s; */
+          /* transition: transform ; */
           line-height:30px ;
+          
           
         }
         .car1{
@@ -45,27 +47,29 @@
             
         }
 
-        .car:hover {
-            transform: translateX(1200px);
+        .road:hover .car{
+            transform: translateX(100%);
             transition-duration: 4s;
-            
-           
         }
+         
     </style>
 </head>
 
 <body>
     <div class="road">
-        <div class="move">
+        
         <div class="car car1">
             <h5>ease</h5>
+            </div>
             <div class="car car2">
                 <h5>linear</h5>
+                </div>
                 <div class="car car3">
                     <h5>ease-in</h5>
+                    </div>
                     <div class="car car4">
                         <h5>ease-out</h5>
-                    </div>
+                    
                     </div>
                     </div>
 </body>
