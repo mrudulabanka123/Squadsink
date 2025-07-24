@@ -377,7 +377,7 @@ border: 2ps solid black;
 .close-btn {
   position: absolute;
   top: 12px;
-  right: 16px;
+  right: 16px; 
   font-size: 25px;
   text-decoration: none;
   color: #333;
