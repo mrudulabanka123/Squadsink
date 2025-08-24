@@ -1,0 +1,80 @@
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    width:100%;
+    gap:40%;
+}
+.nav ul{
+    display: flex;
+    justify-content: center;
+  column-gap:10%;
+}
+.nav a{
+ text-decoration: none;
+ color: white;
+ font-size: 100%;
+ font-size: larger;
+}
+.nav:hover a{
+    color: red;
+}
+/* @media(max-width:425px){
+    header{
+        flex-direction: column;
+        background-color: black;
+        width:100%;
+    }
+    .nav{
+        flex-direction: column;
+       display: block;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       flex-wrap: wrap;
+    }
+    .nav a{
+     display: block;
+    }
+} */
+ @media (max-width: 426px) {
+    header{
+        flex-direction: column;
+    }
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+ @media (max-width: 769px) {
+    header{
+        display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    width:100%;
+    gap:20%;
+    }
+    .header-logo{
+        padding-left: 20%;
+    }
+  /* .nav ul{
+    flex-direction: column;
+    text-align: center;
+    column-gap: 5%;
+  } */
+}
+@media (max-width:1026px){
+     header{
+        display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    width:100%;
+    gap:10%;
+    }
+}
