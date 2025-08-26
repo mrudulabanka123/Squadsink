@@ -711,3 +711,38 @@ default:
       console.log("Enter the valid Position");
    
  }
+ for(let i=0;i<=5;i++){
+  let row="";
+  for(let j=0;j<=i;j++)
+
+    row+="*";
+  console.log(row);
+}
+let line=" ";
+let rows=4;
+for(let i=1;i<=rows;i++){
+  line=" ";
+
+for(let j=1;j<=i;j++){
+  line+=j;
+}
+console.log(line);
+}
+
+for(i=1;i<=20;i++){
+  if(i%2===0){
+    console.log(i);
+  }
+}
+ let sum="";
+ let t=5;
+for(i=0;i<=t;i++){
+ let sum="";
+ for(let s=1;s<=t-i;s++){
+   sum+=" ";
+ }
+  for(let j=1;j<=i;j++){
+   sum+=i;
+  }
+ console.log(sum)
+} 
