@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model-Real Time Example</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <!-- Todo List Container -->
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">📌 To-Do List</h2>
+    <hr class="mb-4">
+
+    <!-- Input & Button -->
+    <div class="flex gap-2 mb-4">
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Enter task name..."
+        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+      <button 
+        id="addBtn" 
+        class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+      >
+        Add
+      </button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="space-y-2"></ul>
+  </div>
+</head>
+
+    <!-- <input type="text" id="name" placeholder="Type your name">
+    <script>
+        let input=document.getElementById("name");
+        input.addEventListener("focus",()=>{
+            console.log("Input is focused");
+        });
+        input.addEventListener("blur",()=>{
+            console.log("Input lost focused");
+        });
+    </script> -->
+    <script>
+        const taskInput=document.getElementById("taskInput");
+        const addBtn=document.getElementById("addBtn");
+        const taskList=document.getElementById("taskList");
+
+        addBtn.addEventListener("click", ()=>{
+            const tasktext=taskInput.value.trim();
+
+            if(tasktext===""){
+                return alert("Please enter a task!");
+            }
+            //create a elemnets
+            const li=document.createElement("li");
+            li.className="flex justify-between items-center bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 shadow-sm";
+
+            const span=document.createElement("span");
+            span.textContent=tasktext;
+            span.className="text-gray-700";
+
+            //Edit Button
+            const editBtn=document.createElement("button");
+            editBtn.textContent="Edit";
+            editBtn.className="text-blue-500 hover:text-blue-700 font-bold ml-2";
+
+            editBtn.onclick=()=>{
+           const input=document.createElement("input");
+           input.type="text";
+           input.value=span.textContent;
+           input.className="flex-1 px-2 py-1 border border-gray-300 rounded-lg";
+
+           input.addEventListener("blur",()=>{
+            if(input.value.trim()!==""){
+                span.textContent=input.value.trim();
+            }
+            li.replaceChild(span,input);
+           });
+           input.addEventListener("keydown",(e)=>{
+            if(e.key==="enter"){
+                input.blur();
+            }
+           }
+           );
+           li.replaceChild(input,span);
+           input.focus();
+        };
+            //Delete Button
+            const deleBtn=document.createElement("button");
+            deleBtn.textContent="X";
+            deleBtn.className="text-red-500 hover:text-red-700 font-bold ml-4";
+            deleBtn.onclick=()=>li.remove();
+
+            li.append(span,editBtn,deleBtn);
+            taskList.appendChild(li);
+
+            taskInput.value="";
+        });
+    </script>
+</body>
+</html>
