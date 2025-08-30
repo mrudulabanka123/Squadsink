@@ -101,6 +101,19 @@
 
             taskInput.value="";
         });
+
+        const domOperation=document.createElement("li");
+        domOperation.innerText=["list1","list2"].join(",");
+        console.log("show the Elements:",domOperation);
+
+        const listIteams=["list1","list2","list3"];
+
+        listIteams.forEach(iteams=>{
+          const li=document.createElement("li");
+          li.innerText=iteams;
+          document.body.appendChild(li);
+
+        })
     </script>
 </body>
 </html>

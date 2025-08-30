@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Pratice</title>
+    <style>
+        #list2{
+            color: red;
+            font-size: 20px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="namelist">
+        <ul id="list1">
+            <li>list</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ul>
+        <ul id="list2"></ul>
+        <button id="btn">click</button>
+    </div>
+    <script>
+        const listIteams=document.getElementsByClassName("namelist");
+        console.log(listIteams);
+
+        const listIteams2=document.getElementById("list");
+        console.log(listIteams2);
+
+        const listIteams3=document.getElementsByTagName("li");
+        console.log(listIteams3);
+
+        const listIteams4=document.querySelector(".namelist li");
+        console.log(listIteams4);
+        
+        const listIteams5=document.querySelectorAll("ul");
+        console.log(listIteams5);
+        
+        // const createList=document.createElement("img");
+        // createList.setAttribute("src","www.Achiversit.com");
+        // createList.setAttribute("alt","link");
+        // console.log(createList);
+        const list1=document.getElementById("list1");
+        const list2=document.getElementById("list2");
+        const button=document.getElementById("btn");
+       button.addEventListener("click",()=>{
+        if(list1.children.length>0){
+            let firstiteam=list1.children[0];
+            firstiteam.textContent="AL";
+            list2.appendChild(firstiteam);
+        }else{
+            alert("No more Iteams to move!");
+        }
+       });
+        
+
+
+
+    </script>
+</body>
+</html>
