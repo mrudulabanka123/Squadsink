@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Object Model-Real Time Example</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model - Real Time Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+
+    /* Navbar styling */
+    nav {
+      background: #222;
+      padding: 12px;
+      display: flex;
+      justify-content: space-around;  /* spread full line */
+      align-items: center;
+      width: 100%;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      background: #444;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start p-6">
+
+  <!-- Navbar -->
+  <div id="navbar" class="w-full mb-6"></div>
 
   <!-- Todo List Container -->
   <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6">
@@ -33,87 +59,87 @@
     <!-- Task List -->
     <ul id="taskList" class="space-y-2"></ul>
   </div>
-</head>
 
-    <!-- <input type="text" id="name" placeholder="Type your name">
-    <script>
-        let input=document.getElementById("name");
-        input.addEventListener("focus",()=>{
-            console.log("Input is focused");
-        });
-        input.addEventListener("blur",()=>{
-            console.log("Input lost focused");
-        });
-    </script> -->
-    <script>
-        const taskInput=document.getElementById("taskInput");
-        const addBtn=document.getElementById("addBtn");
-        const taskList=document.getElementById("taskList");
+  <script>
+    // -------------------
+    // To-Do List Script
+    // -------------------
+    const taskInput = document.getElementById("taskInput");
+    const addBtn = document.getElementById("addBtn");
+    const taskList = document.getElementById("taskList");
 
-        addBtn.addEventListener("click", ()=>{
-            const tasktext=taskInput.value.trim();
+    addBtn.addEventListener("click", () => {
+      const taskText = taskInput.value.trim();
 
-            if(tasktext===""){
-                return alert("Please enter a task!");
-            }
-            //create a elemnets
-            const li=document.createElement("li");
-            li.className="flex justify-between items-center bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 shadow-sm";
+      if (taskText === "") {
+        return alert("Please enter a task!");
+      }
 
-            const span=document.createElement("span");
-            span.textContent=tasktext;
-            span.className="text-gray-700";
+      // Create task item
+      const li = document.createElement("li");
+      li.className = "flex justify-between items-center bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 shadow-sm";
 
-            //Edit Button
-            const editBtn=document.createElement("button");
-            editBtn.textContent="Edit";
-            editBtn.className="text-blue-500 hover:text-blue-700 font-bold ml-2";
+      const span = document.createElement("span");
+      span.textContent = taskText;
+      span.className = "text-gray-700";
 
-            editBtn.onclick=()=>{
-           const input=document.createElement("input");
-           input.type="text";
-           input.value=span.textContent;
-           input.className="flex-1 px-2 py-1 border border-gray-300 rounded-lg";
+      // Edit button
+      const editBtn = document.createElement("button");
+      editBtn.textContent = "Edit";
+      editBtn.className = "text-blue-500 hover:text-blue-700 font-bold ml-2";
 
-           input.addEventListener("blur",()=>{
-            if(input.value.trim()!==""){
-                span.textContent=input.value.trim();
-            }
-            li.replaceChild(span,input);
-           });
-           input.addEventListener("keydown",(e)=>{
-            if(e.key==="enter"){
-                input.blur();
-            }
-           }
-           );
-           li.replaceChild(input,span);
-           input.focus();
-        };
-            //Delete Button
-            const deleBtn=document.createElement("button");
-            deleBtn.textContent="X";
-            deleBtn.className="text-red-500 hover:text-red-700 font-bold ml-4";
-            deleBtn.onclick=()=>li.remove();
+      editBtn.onclick = () => {
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = span.textContent;
+        input.className = "flex-1 px-2 py-1 border border-gray-300 rounded-lg";
 
-            li.append(span,editBtn,deleBtn);
-            taskList.appendChild(li);
-
-            taskInput.value="";
+        input.addEventListener("blur", () => {
+          if (input.value.trim() !== "") {
+            span.textContent = input.value.trim();
+          }
+          li.replaceChild(span, input);
         });
 
-        const domOperation=document.createElement("li");
-        domOperation.innerText=["list1","list2"].join(",");
-        console.log("show the Elements:",domOperation);
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {  // fixed "Enter" case
+            input.blur();
+          }
+        });
 
-        const listIteams=["list1","list2","list3"];
+        li.replaceChild(input, span);
+        input.focus();
+      };
 
-        listIteams.forEach(iteams=>{
-          const li=document.createElement("li");
-          li.innerText=iteams;
-          document.body.appendChild(li);
+      // Delete button
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "X";
+      deleteBtn.className = "text-red-500 hover:text-red-700 font-bold ml-4";
+      deleteBtn.onclick = () => li.remove();
 
-        })
-    </script>
+      li.append(span, editBtn, deleteBtn);
+      taskList.appendChild(li);
+
+      taskInput.value = "";
+    });
+
+    // -------------------
+    // Navbar Script
+    // -------------------
+    const menuItems = ["Home", "About", "Services", "Contact"];
+
+    const navbar = document.getElementById("navbar");
+    const nav = document.createElement("nav");
+
+    menuItems.forEach(item => {
+      const link = document.createElement("a");
+      link.textContent = item;
+      link.href = item.toLowerCase() + ".html";  // auto link
+      nav.appendChild(link);
+    });
+
+    navbar.appendChild(nav);
+  </script>
+
 </body>
 </html>

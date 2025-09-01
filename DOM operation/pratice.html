@@ -13,15 +13,19 @@
     </style>
 </head>
 <body>
+    <div id="nav">
+        
+    </div>
     <div class="namelist">
-        <ul id="list1">
+        <ul id="list1">OldList
             <li>list</li>
             <li>list2</li>
             <li>list3</li>
-        </ul>
-        <ul id="list2"></ul>
+        </ul><br>
+        <ul id="list2">NewList</ul>
         <button id="btn">click</button>
     </div>
+
     <script>
         const listIteams=document.getElementsByClassName("namelist");
         console.log(listIteams);
@@ -42,8 +46,8 @@
         // createList.setAttribute("src","www.Achiversit.com");
         // createList.setAttribute("alt","link");
         // console.log(createList);
-        const list1=document.getElementById("list1");
-        const list2=document.getElementById("list2");
+        // const list1=document.getElementById("list1");
+        // const list2=document.getElementById("list2");
         const button=document.getElementById("btn");
        button.addEventListener("click",()=>{
         if(list1.children.length>0){
@@ -55,8 +59,17 @@
         }
        });
         
+    //    const newList=document.createElement("li");
+    //    newList.textContent=["one","two","three"]
+    //    console.log("newlistIteams:",newList); 
 
-
+       let arr=["one","two","three"];
+       let list=document.getElementById("list1");
+       arr.forEach(item=>{
+        let newlist=document.createElement("li");
+        newlist.textContent=item;
+        list.appendChild(newlist);
+       });
 
     </script>
 </body>
